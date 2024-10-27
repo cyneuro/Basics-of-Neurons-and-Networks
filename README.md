@@ -1,5 +1,5 @@
-# Computional Neuroscience Tutorials
-#### A collection of jupyter notebooks builts by the Neural Engineering Laboratory at the University of Missouri(Mizzou)
+# Basics of Neurons and Network overview
+#### A collection of jupyter notebooks built by the Neural Engineering Laboratory at the University of Missouri(Mizzou)
 
 ## All tutorials can be on either a local computer or on Google Colab. To run on Colab there is no need to download the repo and instead click on the folder and then the .ipynb file. There will be a button at the start of the notebook which says 'Open in Colab'. Click this and the notebook will loaded into Colab. If running on a local computer machine sure that Jupyter is installed with the python packages neuron and ipywidgets.
 ### [S1-PassiveMembrane](/S1_PassiveMembrane/)
@@ -11,7 +11,7 @@
 ### [S4-Synapses](/S4_Synapses/)
 * #### An educational notebook with NEURON model about how synapses operate.
 ### [S5-CPG](/S5_CPG/)
-* #### An educational notebook with a NEURON modle about central pattern generates and how differnt movement patterns in horese may arise.
+* #### An educational notebook with a NEURON model about central pattern generates and how differnt movement patterns in horese may arise.
 ### [S6-STM-WTA Networks](/S6_STM_WTA/)
 * #### Educational notebooks talking about short term memory(STM) and winner take all(WTA) networks
 ### [B1-CreatingSingleCell](/B1_BasicsSingleNeuron/B1_SingleNeuronBio&Model.ipynb)
