@@ -1,7 +1,7 @@
 # Basics of Neurons and Network overview
 #### A collection of jupyter notebooks built by the Neural Engineering Laboratory at the University of Missouri(Mizzou)
 
-## All tutorials can be on either a local computer or on Google Colab. To run on Colab there is no need to download the repo and instead click on the folder and then the .ipynb file. There will be a button at the start of the notebook which says 'Open in Colab'. Click this and the notebook will loaded into Colab. If running on a local computer machine sure that Jupyter is installed with the python packages neuron and ipywidgets.
+## All tutorials can be on either a local computer or on Google Colab. To run on Colab there is no need to download the repo and instead click on the folder and then the .ipynb file. There will be a button at the start of the notebook which says 'Open in Colab'. Click this and the notebook will be loaded into Colab. If running on a local computer machine sure that Jupyter is installed with the python packages neuron and ipywidgets.
 ### [S1-PassiveMembrane](/S1_PassiveMembrane/)
 * #### A simple notebook going over NEURON basics and contains a Hodgkin–Huxley model with widgets
 ### [S2-ActionPotenial](/S2_ActionPotential/)
