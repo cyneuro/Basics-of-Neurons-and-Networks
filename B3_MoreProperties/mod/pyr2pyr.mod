@@ -276,11 +276,6 @@ FUNCTION sfunc (v (mV)) {
 	UNITSON
 }
 
-VERBATIM
-double nrn_random_pick(void* r);
-void* nrn_random_arg(int argpos);
-ENDVERBATIM
-
 FUNCTION randGen() {
 VERBATIM
    if (_p_randObjPtr) {
@@ -289,7 +284,7 @@ VERBATIM
       : each instance. However, the corresponding hoc Random
       : distribution MUST be set to Random.uniform(0,1)
       */
-      _lrandGen = nrn_random_pick(_p_randObjPtr);
+      _lrandGen = nrn_random_pick((Rand*)_p_randObjPtr);
    }else{
       hoc_execerror("Random object ref not set correctly for randObjPtr"," only via hoc Random");
    }
@@ -298,11 +293,11 @@ ENDVERBATIM
 
 PROCEDURE setRandObjRef() {
 VERBATIM
-   void** pv4 = (void**)(&_p_randObjPtr);
+   Rand** pv4 = (Rand**)(&_p_randObjPtr);
    if (ifarg(1)) {
       *pv4 = nrn_random_arg(1);
    }else{
-      *pv4 = (void*)0;
+      *pv4 = (Rand*)0;
    }
 ENDVERBATIM
 }
