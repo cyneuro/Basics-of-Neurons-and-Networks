@@ -1,7 +1,24 @@
 # Basics of Neurons and Network overview
 #### A collection of jupyter notebooks built by the Neural Engineering Laboratory at the University of Missouri(Mizzou)
 
-## All tutorials can be on either a local computer or on Google Colab. To run on Colab there is no need to download the repo and instead click on the folder and then the .ipynb file. There will be a button at the start of the notebook which says 'Open in Colab'. Click this and the notebook will be loaded into Colab. If running on a local computer make sure that Jupyter is installed with the python packages neuron and ipywidgets.
+## Running the tutorials
+
+### Google Colab
+No local install is needed. Open a folder, open the `.ipynb` file, and click **Open in Colab**. The notebook installs the same pinned packages listed in `requirements.txt` when it detects Colab.
+
+### Local (Poetry)
+Requires [Poetry](https://python-poetry.org/docs/#installation), **Python 3.10–3.13**, and a C/C++ toolchain so `nrnivmodl` can compile `.mod` files (NEURON 9.x).
+
+```bash
+poetry install
+poetry run jupyter notebook
+```
+
+Pinned runtime packages match Colab (`neuron==9.0.2`, `ipywidgets==7.7.1`, plus `matplotlib` / `numpy`). Notebooks set `NEURON_MODULE_OPTIONS=-nogui` so NEURON does not abort Jupyter when no GUI display is available. To recompile mechanisms in every tutorial folder:
+
+```bash
+poetry run python scripts/compile_all_mods.py
+```
 ### [S1-PassiveMembrane](/S1_PassiveMembrane/)
 * #### A simple notebook going over NEURON basics and contains a Hodgkin–Huxley model with widgets
 ### [S2-ActionPotenial](/S2_ActionPotential/)
