@@ -14,7 +14,7 @@ poetry install
 poetry run jupyter notebook
 ```
 
-Pinned runtime packages match Colab (`neuron==9.0.2`, `ipywidgets==7.7.1`, plus `matplotlib` / `numpy`). Notebooks set `NEURON_MODULE_OPTIONS=-nogui` so NEURON does not abort Jupyter when no GUI display is available. To recompile mechanisms in every tutorial folder:
+`poetry install` is the only local setup command: it installs NEURON, plotting/widget libraries, and Jupyter. Notebooks set `NEURON_MODULE_OPTIONS=-nogui` so NEURON does not abort Jupyter when no GUI display is available. To recompile mechanisms in every tutorial folder:
 
 ```bash
 poetry run python scripts/compile_all_mods.py
