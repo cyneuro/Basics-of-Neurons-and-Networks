@@ -1,5 +1,5 @@
-# Runtime pins mirrored from pyproject.toml for Google Colab.
-# Keep in sync when bumping versions locally with Poetry.
+# Colab subset of pyproject.toml (Jupyter is omitted; Colab already provides it).
+# Keep the shared pins in sync when bumping versions locally with Poetry.
 neuron==9.0.2
 ipywidgets==7.7.1
 matplotlib>=3.7
