@@ -6,19 +6,27 @@
 ### Google Colab
 No local install is needed. Open a folder, open the `.ipynb` file, and click **Open in Colab**. The notebook installs the same pinned packages listed in `requirements.txt` when it detects Colab.
 
-### Local (Poetry)
-Requires [Poetry](https://python-poetry.org/docs/#installation), **Python 3.10–3.13**, and a C/C++ toolchain so `nrnivmodl` can compile `.mod` files (NEURON 9.x).
+### Local running and development 
+Requires [Poetry](https://python-poetry.org/docs/#installation),and a C/C++ toolchain so `nrnivmodl` can compile `.mod` files. If you are on macOS this mean you need to first run this command. This will ensure you have the needed C tools to compile neuron code. 
 
 ```bash
-poetry install
-poetry run jupyter notebook
+xcode-select --install
 ```
+On windows machines simply look up a tutorial for installing `GCC compiler`.
 
-`poetry install` is the only local setup command: it installs NEURON, plotting/widget libraries, and Jupyter. Notebooks set `NEURON_MODULE_OPTIONS=-nogui` so NEURON does not abort Jupyter when no GUI display is available. To recompile mechanisms in every tutorial folder:
-
+To install the python environment you can run this command. You must first be in directory of this repo for the command to work.
+```bash
+poetry install
+```
+You can then compile every mod file using this command.
 ```bash
 poetry run python scripts/compile_all_mods.py
 ```
+Finally you can open the notebooks with this command or open the notebooks in your IDE of choice. 
+```bash
+poetry run jupyter notebook
+```
+
 ### [S1-PassiveMembrane](/S1_PassiveMembrane/)
 * #### A simple notebook going over NEURON basics and contains a Hodgkin–Huxley model with widgets
 ### [S2-ActionPotenial](/S2_ActionPotential/)
